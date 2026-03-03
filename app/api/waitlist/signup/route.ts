@@ -5,7 +5,8 @@ import { eq } from 'drizzle-orm';
 import { NextResponse } from 'next/server';
 
 const allowedOrigins = [
-   'https://theloupecollective.com'
+   'https://theloupecollective.com',
+   'https://www.theloupecollective.com'
 ];
 
 function makeCorsResponse(body: any, status: number, origin: string) {
