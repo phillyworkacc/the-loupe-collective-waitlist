@@ -18,6 +18,9 @@ export default function AppWrapper ({ children }: { children: ReactNode }) {
                   <div className="app-icon-clickable" onClick={() => router.push("/")}>
                      <TheLoupeCollectiveLogo size={32} />
                   </div>
+                  <div className="box full pdx-2">
+                     <div className="text-xxs bold-600 fit cursor-pointer" onClick={() => router.push("/blogs")}>Blog Posts</div>
+                  </div>
                </div>
                <div className="account-image" onClick={() => router.push("/settings")}>
                   <CustomIcon url={session?.user?.image! || userDefaultImage.src} size={40} round />

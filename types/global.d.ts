@@ -15,3 +15,12 @@ type Contact = {
    drawsToTlc: string;
    createdat: Date;
 }
+
+type Blog = {
+   id: number;
+   blogId: string;
+   title: string;
+   content: string;
+   imageUrl: string;
+   createdAt: string;
+}

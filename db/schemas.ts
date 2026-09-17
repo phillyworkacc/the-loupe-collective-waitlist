@@ -11,3 +11,12 @@ export const contactsTable = pgTable("contacts", {
    drawsToTlc: text("draws_to_lc"),
    createdat: timestamp("created_at").defaultNow(),
 });
+
+export const blogsTable = pgTable("blogs", {
+   id: serial("id").primaryKey(),
+   blogId: text("blog_id"),
+   title: text("title"),
+   content: text("content"),
+   imageUrl: text("image_url"),
+   createdAt: text("created_at"),
+});
