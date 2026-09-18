@@ -20,3 +20,9 @@ export const blogsTable = pgTable("blogs", {
    imageUrl: text("image_url"),
    createdAt: text("created_at"),
 });
+
+export const newsletterTable = pgTable("newsletter", {
+   id: serial("id").primaryKey(),
+   email: text("email"),
+   joinedOn: timestamp("joined_on").defaultNow(),
+});
