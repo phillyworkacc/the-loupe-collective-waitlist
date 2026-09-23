@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.2",
+    "cloudinary": "^2.11.0",
     "drizzle-kit": "^0.31.6",
     "drizzle-orm": "^0.44.7",
     "framer-motion": "^12.23.24",

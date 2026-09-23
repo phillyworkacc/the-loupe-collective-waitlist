@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "../glendean-website/utils/time.ts"  ],
   "exclude": ["node_modules"]
 }

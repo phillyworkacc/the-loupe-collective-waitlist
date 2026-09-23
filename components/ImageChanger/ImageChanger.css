@@ -1,0 +1,44 @@
+.profile-image-changer {
+   width: 100%;
+   height: fit-content;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   justify-content: center;
+}
+
+.profile-image-changer .info-label {
+   width: 100%;
+}
+
+.profile-image-changer .profile-image-viewer {
+   height: 200px;
+   aspect-ratio: 2/1;
+   overflow: hidden;
+   border: 1px solid #efefef;
+   cursor: pointer;
+}
+
+.profile-image-changer .profile-image-viewer > img {
+   user-select: none;
+   -webkit-user-drag: none;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+}
+
+.profile-image-changer input[type=file] { display: none; }
+
+.no-image-selector {
+   width: 100%;
+   height: 20vh;
+   padding: 30px 70px;
+   color: #333;
+   background-color: #ededed;
+   border: 1px dashed #aaa;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}

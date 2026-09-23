@@ -16,6 +16,7 @@ export const blogsTable = pgTable("blogs", {
    id: serial("id").primaryKey(),
    blogId: text("blog_id"),
    title: text("title"),
+   subtitle: text("subtitle"),
    content: text("content"),
    imageUrl: text("image_url"),
    createdAt: text("created_at"),
