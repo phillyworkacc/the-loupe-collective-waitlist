@@ -12,6 +12,7 @@ export default function page() {
    const [title, setTitle] = useState("");
    const [subtitle, setSubtitle] = useState("");
    const [content, setContent] = useState("");
+   const [tags, setTags] = useState("");
    const [imageUrl, setImageUrl] = useState("");
    const [imageFile, setImageFile] = useState<any>(null);
    const [imageUploadMethod, setImageUploadMethod] = useState<"upload" | "url">("upload");
@@ -28,7 +29,7 @@ export default function page() {
          callback();
          return;
       }
-      const posted = await makeBlogPost(title, subtitle, content, imageFile);
+      const posted = await makeBlogPost(title, subtitle, content, tags, imageFile);
       if (posted) {
          toast.success("Blog Posted!");
          router.push("/blogs");
@@ -49,11 +50,13 @@ export default function page() {
          callback();
          return;
       }
-      const posted = await makeBlogPost(title, subtitle, content, imageFile);
+      const posted = await makeBlogPost(title, subtitle, content, tags, imageFile);
       if (posted) {
          toast.success("Blog Posted!");
          setImageUrl("");
          setTitle("");
+         setSubtitle("");
+         setTags("");
          setContent("");
       } else {
          toast.error("Failed to create blog post");

@@ -15,11 +15,13 @@ export const contactsTable = pgTable("contacts", {
 export const blogsTable = pgTable("blogs", {
    id: serial("id").primaryKey(),
    blogId: text("blog_id"),
-   title: text("title"),
-   subtitle: text("subtitle"),
-   content: text("content"),
+   title: text("title").notNull(),
+   subtitle: text("subtitle").default(""),
+   tags: text("tags").default("").notNull(),
+   content: text("content").notNull(),
    imageUrl: text("image_url"),
-   createdAt: text("created_at"),
+   featured: text("featured").default("no"),
+   createdAt: text("created_at").notNull(),
 });
 
 export const newsletterTable = pgTable("newsletter", {

@@ -6,7 +6,7 @@ import { uuid } from "@/utils/uuid";
 import { eq } from "drizzle-orm";
 import { uploadImageToCloudinary } from "./extras";
 
-export async function makeBlogPost (title: string, subtitle: string, content: string, image: File) {
+export async function makeBlogPost (title: string, subtitle: string, content: string, tags: string, image: File) {
    try {
       const blogId = `blog-${uuid()}`;
 
@@ -17,7 +17,8 @@ export async function makeBlogPost (title: string, subtitle: string, content: st
       const result = await dalRequireAuth(async user => 
          await dalDbOperation(async () => {
             const res = await db.insert(blogsTable).values({
-               blogId, title, subtitle, content, imageUrl, createdAt: Date.now().toString()
+               blogId, title, subtitle, content, imageUrl, createdAt: Date.now().toString(),
+               featured: "", tags
             });
             return (res.rowCount === 1);
          })
