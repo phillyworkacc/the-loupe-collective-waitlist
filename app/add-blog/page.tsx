@@ -88,6 +88,10 @@ export default function page() {
                <textarea className="xxs full pd-15 pdx-2 border-radius-15 h-15" value={subtitle} onChange={e => setSubtitle(e.target.value)} />
             </div>
             <div className="box full dfb column gap-10">
+               <div className="text-xs bold-600 full">Tags</div>
+               <textarea className="xxs full pd-15 pdx-2 border-radius-15 h-15" value={tags} onChange={e => setTags(e.target.value)} />
+            </div>
+            <div className="box full dfb column gap-10">
                <div className="text-xs bold-600 full">Content</div>
                <textarea className="xxs full pd-2 pdx-2 border-radius-20 h-65" value={content} onChange={e => setContent(e.target.value)} />
             </div>
